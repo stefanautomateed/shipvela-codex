@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "shipvela",
+  "version": "0.1.0",
+  "description": "Publish websites from your coding assistant. Deploy local builds or connected GitHub projects, inspect build logs, and get a live HTTPS link."
+}

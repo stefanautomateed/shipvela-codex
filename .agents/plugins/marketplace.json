@@ -1,0 +1,10 @@
+{
+  "name": "shipvela-beta",
+  "interface": { "displayName": "Shipvela" },
+  "plugins": [{
+    "name": "shipvela",
+    "source": { "source": "local", "path": "./plugins/shipvela" },
+    "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+    "category": "Developer tools"
+  }]
+}

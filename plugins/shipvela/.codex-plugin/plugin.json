@@ -1,0 +1,7 @@
+{
+  "name": "shipvela",
+  "version": "0.1.0",
+  "description": "Publish websites, inspect build logs and manage your Shipvela projects from Codex.",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
