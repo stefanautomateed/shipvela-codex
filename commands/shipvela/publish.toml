@@ -1,0 +1,4 @@
+description = "Publish a supported website through your connected Shipvela account"
+prompt = """
+Help publish {{args}} on Shipvela using its MCP tools and the publish skill. Identify the account, project and intended public files or remote branch. Explain the publishing allowance and obtain the user's confirmation for that target. For small static uploads, return the Shipvela review link and wait for the owner to review the manifest and confirm; do not approve on their behalf. Larger local builds use the separately authorized CLI. Follow the exact operation and job, explain actual failures, and return the live URL only after a successful deployment. Preserve request IDs across retries. Do not change billing, unrelated projects or credential permissions.
+"""

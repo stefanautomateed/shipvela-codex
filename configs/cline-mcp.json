@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "shipvela": {
+      "type": "streamableHttp",
+      "url": "https://shipvela.com/mcp",
+      "timeout": 60,
+      "autoApprove": [],
+      "disabled": false
+    }
+  }
+}

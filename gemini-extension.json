@@ -1,0 +1,17 @@
+{
+  "name": "shipvela",
+  "version": "0.2.0",
+  "description": "Publish supported websites through your Shipvela account, confirm the target and receive a live HTTPS URL.",
+  "mcpServers": {
+    "shipvela": {
+      "httpUrl": "https://shipvela.com/mcp",
+      "timeout": 60000,
+      "trust": false,
+      "oauth": {
+        "enabled": true,
+        "issuer": "https://shipvela.com"
+      }
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

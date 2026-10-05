@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "shipvela": {
+      "httpUrl": "https://shipvela.com/mcp",
+      "timeout": 60000,
+      "trust": false,
+      "oauth": {
+        "enabled": true,
+        "issuer": "https://shipvela.com"
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Shipvela for your coding assistant
 
-Publish a website from Codex, Claude Code, Claude or Cursor with your Shipvela account.
+Publish a website from Codex, Claude Code, Claude, Cursor, Copilot, Gemini CLI or Cline with your Shipvela account.
 
 [![Publish with Shipvela](assets/publish-with-shipvela.svg)](https://shipvela.com/integrations/assistants?utm_source=github&utm_medium=referral&utm_campaign=assistant_distribution&utm_content=readme_badge)
 
@@ -20,6 +20,33 @@ codex mcp login shipvela
 claude plugin marketplace add stefanautomateed/shipvela-codex
 claude plugin install shipvela@shipvela-beta
 ```
+
+## Gemini CLI
+
+```sh
+gemini extensions install https://github.com/stefanautomateed/shipvela-codex
+```
+
+Start Gemini CLI, run `/mcp auth shipvela`, then `/shipvela:publish` or ask it to publish your website. The extension includes the MCP server, `GEMINI.md` context and the publishing skill. Tool trust stays off. For manual configuration, merge [configs/gemini-mcp.json](configs/gemini-mcp.json) into `.gemini/settings.json`; Streamable HTTP uses `httpUrl`.
+
+## GitHub Copilot
+
+```sh
+copilot plugin marketplace add stefanautomateed/shipvela-codex
+copilot plugin install shipvela@shipvela-beta
+```
+
+Restart your Copilot CLI session, open `/mcp` and authenticate Shipvela. Manual CLI configuration: [configs/copilot-mcp.json](configs/copilot-mcp.json), merged into `~/.copilot/mcp-config.json`.
+
+In VS Code, run **MCP: Add Server → HTTP**, enter `https://shipvela.com/mcp`, then complete OAuth. Example workspace config: [configs/vscode-mcp.json](configs/vscode-mcp.json) in `.vscode/mcp.json`. This setup is for CLI and IDE sessions; GitHub's cloud agent and code review currently do not support remote OAuth MCP servers.
+
+## Cline
+
+```sh
+cline mcp add shipvela https://shipvela.com/mcp --transport streamable-http
+```
+
+Review the add wizard, then authenticate in Cline's MCP settings when prompted. For the extension, merge [configs/cline-mcp.json](configs/cline-mcp.json) into `cline_mcp_settings.json` through the MCP settings editor. Keep `autoApprove` empty. Your Cline model provider is configured separately. Use a current client with Streamable HTTP and OAuth support. This is a remote MCP server, not a Cline plugin package.
 
 Complete OAuth in the normal MCP connection flow. No AWS or GitHub token belongs in this repository or your MCP configuration. Local builds use the separately authorized Shipvela CLI.
 

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "shipvela": {
+      "type": "http",
+      "url": "https://shipvela.com/mcp",
+      "tools": [
+        "*"
+      ]
+    }
+  }
+}
