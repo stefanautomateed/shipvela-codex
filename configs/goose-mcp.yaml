@@ -1,0 +1,7 @@
+extensions:
+  shipvela:
+    name: Shipvela
+    type: streamable_http
+    uri: https://shipvela.com/mcp
+    enabled: true
+    timeout: 60

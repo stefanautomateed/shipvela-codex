@@ -1,0 +1,17 @@
+{
+  "name": "shipvela-factory",
+  "description": "Publish websites through your connected Shipvela account.",
+  "owner": {
+    "name": "Content Petit LLC",
+    "email": "hello@shipvela.com"
+  },
+  "plugins": [
+    {
+      "name": "shipvela",
+      "description": "Publish a website, review the exact deployment, and return a live HTTPS URL.",
+      "source": "./factory/shipvela",
+      "category": "development",
+      "homepage": "https://shipvela.com/integrations/assistants"
+    }
+  ]
+}

@@ -40,7 +40,20 @@ Mistral Vibe currently lacks native MCP OAuth. [configs/mistral-vibe-mcp.toml](c
 
 [configs/auggie-mcp-bridge.json](configs/auggie-mcp-bridge.json) provides the same bridge for Auggie in `~/.augment/settings.json`. This avoids assuming native OAuth support that its current integration guide does not establish. Preserve other entries and configure permission prompts before production use.
 
-## Devin Cascade
+## Factory Droid
+
+A native plugin is available in [factory/shipvela](factory/shipvela). Add this repository with `droid plugin marketplace add stefanautomateed/shipvela-codex`; check `droid plugin marketplace list` for its registered name, then install `shipvela@<registered-name>` and authenticate through `/mcp`. Manual setup: `droid mcp add shipvela https://shipvela.com/mcp --type http`, or merge [configs/factory-mcp.json](configs/factory-mcp.json) into `.factory/mcp.json`. Keep OAuth and publishing confirmations enabled.
+
+## goose
+
+Merge [configs/goose-mcp.yaml](configs/goose-mcp.yaml) into `~/.config/goose/config.yaml`, retaining existing extensions. The remote Streamable HTTP connection uses native OAuth discovery/DCR. Alternatively, add a remote extension through the normal goose settings, URL `https://shipvela.com/mcp`.
+
+[Add Shipvela to goose](goose://extension?url=https%3A%2F%2Fshipvela.com%2Fmcp&type=streamable_http&timeout=60&id=shipvela&name=Shipvela&description=Publish%20websites%20with%20your%20Shipvela%20account). Review the remote URL and OAuth permissions. This custom install link is not a verified goose directory listing.
+
+## Devin Local and Cascade
+
+For current Devin Local/CLI, merge [configs/devin-local-mcp.json](configs/devin-local-mcp.json) into `.devin/mcp_config.json`. Or use `devin mcp add shipvela https://shipvela.com/mcp`, then `devin mcp login shipvela`. Since v3000.3, MCP definitions live in dedicated `mcp_config.json` files; earlier releases used `config.json`. Do not overwrite existing entries.
+
 
 For the legacy Cascade agent, merge [configs/devin-cascade-mcp.json](configs/devin-cascade-mcp.json) into `~/.config/devin/mcp_config.json` and complete OAuth. Devin Local uses a separate CLI configuration; this file is specifically for Cascade, not the newer Devin Local marketplace.
 

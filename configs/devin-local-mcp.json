@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "shipvela": {
+      "url": "https://shipvela.com/mcp",
+      "transport": "http"
+    }
+  }
+}
