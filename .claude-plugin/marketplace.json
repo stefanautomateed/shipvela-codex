@@ -1,0 +1,15 @@
+{
+  "name": "shipvela-beta",
+  "owner": {
+    "name": "Content Petit LLC",
+    "email": "hello@shipvela.com",
+    "url": "https://shipvela.com"
+  },
+  "plugins": [
+    {
+      "name": "shipvela",
+      "source": "./plugins/shipvela",
+      "description": "Publish websites from your coding assistant with owner confirmation, deployment status and a live HTTPS URL."
+    }
+  ]
+}

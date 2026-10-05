@@ -10,6 +10,7 @@ Use the connected user's Shipvela account. Publishing updates a live website and
 ## Choose the correct path
 
 - **Local static site:** inspect the project's build instructions and package scripts. Build locally, then publish the public output directory with the CLI. No GitHub connection is needed.
+- **Small static website created in chat:** use `prepare_static_publish` for prebuilt HTML/CSS/JS and assets, up to 500 KB/100 files. Requires root `index.html`. Return the review URL and let the owner confirm in Shipvela. Staging never publishes. New projects need projects:write as well as deployments:write. For updates choose the existing upload project; do not create a duplicate website.
 - **GitHub project:** inspect the Shipvela project and branch. The remote MCP deploy tool builds the current GitHub branch, not local changes. For a local checkout, prefer CLI `deploy`, which checks the repository, branch, clean tree and pushed commit. Do not silently bypass these checks with `--allow-remote`.
 - **Inspection or troubleshooting:** use MCP project, operation, deployment and build-log tools. Read current allowances with `get_usage` when a plan limit prevents publishing.
 
@@ -17,10 +18,10 @@ Shipvela supports static HTML/React/Vite/Astro output and supported GitHub-based
 
 ## Local CLI
 
-Check `shipvela --version` and `shipvela whoami --json`. Use CLI 0.4.0 or newer. If missing, install the versioned package:
+Check `shipvela --version` and `shipvela whoami --json`. Use CLI 0.4.1 or newer. If missing, install the versioned package:
 
 ```sh
-npm install -g https://shipvela.com/downloads/shipvela-cli-0.4.0.tgz
+npm install -g https://shipvela.com/downloads/shipvela-cli-0.4.1.tgz
 shipvela login
 ```
 
@@ -55,7 +56,7 @@ codex mcp login shipvela
 
 Read the target project before deploying. For a new GitHub project, use repository discovery and framework detection before `create_project`.
 
-Each `create_project` or `deploy_project` intent requires one unique `requestId` (a UUID works). Preserve the exact ID and arguments across retries. These tools return a durable operation. Poll `get_operation` no faster than its suggested interval. When submission succeeds, use `get_deployment` for the returned project/job pair. Do not invoke the deployment tool repeatedly to check status.
+Each `prepare_static_publish`, `create_project` or `deploy_project` intent requires one unique `requestId` (a UUID works). Preserve the exact ID and arguments across retries. These tools return a durable operation. Static files stay encrypted for a one-hour owner review; the owner signs in and explicitly confirms before the worker uploads them. Never approve that browser step on the user’s behalf or treat staging as permission to publish. Cancellation discards staged files. Do not place arbitrary external URLs in file inputs or send unbuilt application source. Poll `get_operation` no faster than its suggested interval. When submission succeeds, use `get_deployment` for the returned project/job pair. Do not invoke the deployment tool repeatedly to check status.
 
 Treat `queued`, `running`, provider timeouts and `check_required` as unresolved. Keep the operation ID and direct the user to its project when manual review is necessary. Do not invent a new request ID to bypass an uncertain write or a plan limit.
 
