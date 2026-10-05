@@ -2,6 +2,10 @@
 
 Publish a website from Codex, Claude Code, Claude or Cursor with your Shipvela account.
 
+[![Publish with Shipvela](assets/publish-with-shipvela.svg)](https://shipvela.com/integrations/assistants?utm_source=github&utm_medium=referral&utm_campaign=assistant_distribution&utm_content=readme_badge)
+
+[Template and course kit](docs/publish-with-shipvela.md): add a publishing badge, installation instructions and a first-publish lesson to your project.
+
 ## Codex
 
 ```sh
