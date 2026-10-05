@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "shipvela",
+  "description": "Publish supported websites with Shipvela, review public files and follow the deployment to a live HTTPS URL."
+}

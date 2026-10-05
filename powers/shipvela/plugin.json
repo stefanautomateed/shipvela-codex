@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "shipvela",
+  "version": "0.2.0",
+  "description": "Publish supported websites with Shipvela, review public files and follow the deployment to a live HTTPS URL.",
+  "author": {
+    "name": "Content Petit LLC",
+    "email": "hello@shipvela.com",
+    "url": "https://shipvela.com"
+  },
+  "homepage": "https://shipvela.com/integrations/assistants",
+  "repository": "https://github.com/stefanautomateed/shipvela-codex",
+  "license": "MIT",
+  "keywords": [
+    "shipvela",
+    "website publishing",
+    "publish website",
+    "website hosting",
+    "deploy website"
+  ]
+}

@@ -1,0 +1,7 @@
+name: Shipvela
+version: 0.2.0
+schema: v1
+mcpServers:
+  - name: shipvela
+    type: streamable-http
+    url: https://shipvela.com/mcp

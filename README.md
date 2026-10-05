@@ -6,6 +6,48 @@ Publish a website from Codex, Claude Code, Claude, Cursor, Copilot, Gemini CLI o
 
 [Template and course kit](docs/publish-with-shipvela.md): add a publishing badge, installation instructions and a first-publish lesson to your project.
 
+## Kiro Powers
+
+Import [powers/shipvela](powers/shipvela) through **Powers → Add Custom Power → Import from GitHub**, or clone this repository and import that folder. CLI users can run `kiro-cli powers install /absolute/path/to/shipvela-codex/powers/shipvela`. The package includes activation keywords, the MCP server and the publishing skill. Direct import does not imply a curated registry listing.
+
+## Kilo and OpenCode
+
+Merge [configs/kilo-mcp.json](configs/kilo-mcp.json) into `kilo.json` (or `.kilo/kilo.json`). Run `kilo mcp auth shipvela` and `kilo mcp list` to verify the connection. For OpenCode, merge [configs/opencode-mcp.json](configs/opencode-mcp.json) into `opencode.json`, then run `opencode mcp auth shipvela` and `opencode mcp list`.
+
+Copy [skills/shipvela-publish](skills/shipvela-publish) into your project's `.agents/skills/shipvela-publish` folder. Existing settings and permissions should be preserved. The skill requires target confirmation, owner review for static uploads, stable request IDs and exact-job success checks.
+
+## Replit
+
+[Add Shipvela to Replit](https://replit.com/integrations?mcp=eyJkaXNwbGF5TmFtZSI6IlNoaXB2ZWxhIiwiYmFzZVVybCI6Imh0dHBzOi8vc2hpcHZlbGEuY29tL21jcCJ9). Review the prefilled name and URL, test the connection and complete OAuth. Alternatively, use **Integrations → Add MCP server**, name Shipvela, URL `https://shipvela.com/mcp`. This is a custom connector install link, not a featured Replit listing.
+
+## Lovable and Bolt
+
+In Lovable's connector catalog, choose **+ → MCP Server**, enter Shipvela and `https://shipvela.com/mcp`, use OAuth and authorize your own account. In Bolt, use **Connectors → Manage Connectors → Add custom connector**, HTTP transport and MCP OAuth. Enable only Shipvela for the project where you need publishing. These connect the assistant's tools; they do not migrate provider-specific backends or databases. Exportable static output can be hosted by Shipvela, or connect the project's GitHub repository in Shipvela first.
+
+## Antigravity
+
+Import [antigravity/shipvela](antigravity/shipvela) as a custom plugin, or place it in your project's `.agents/plugins/shipvela`. CLI: `agy plugin install /absolute/path/to/shipvela-codex/antigravity/shipvela`. The bundle uses Antigravity's `plugin.json` schema and `mcp_config.json` with `serverUrl`. Authenticate through Customizations and retain tool approvals. Manual remote config: [configs/antigravity-mcp.json](configs/antigravity-mcp.json).
+
+## Zed, Continue and Amp
+
+- Zed: merge [configs/zed-mcp.json](configs/zed-mcp.json) into settings, or **Settings → AI → MCP Servers → Add Remote Server**, then authenticate. Zed prompts for OAuth when no Authorization header is present.
+- Continue: place [configs/continue-mcp.yaml](configs/continue-mcp.yaml) in `.continue/mcpServers/shipvela.yaml` and use Agent mode. Complete its authentication prompt; a configured server alone does not establish a grant.
+- Amp: `amp mcp add shipvela https://shipvela.com/mcp`, or merge [configs/amp-mcp.json](configs/amp-mcp.json) into Amp settings. Hosted personal definitions: `amp mcp remote --personal add Shipvela https://shipvela.com/mcp --auth oauth`, then log in. Do not copy credentials into shared definitions.
+
+## Mistral Vibe and Auggie
+
+Mistral Vibe currently lacks native MCP OAuth. [configs/mistral-vibe-mcp.toml](configs/mistral-vibe-mcp.toml) uses the npm-published `mcp-remote@0.14.3` stdio bridge, which handles OAuth in your browser and stores connection tokens locally. Append it to your Vibe `config.toml`; Node/npm is required. It adds no API key to source code. Publishing tools retain Ask permissions and Shipvela owner review remains required. Review the bridge's [source and security notes](https://github.com/punkpeye/mcp-remote) before installing it.
+
+[configs/auggie-mcp-bridge.json](configs/auggie-mcp-bridge.json) provides the same bridge for Auggie in `~/.augment/settings.json`. This avoids assuming native OAuth support that its current integration guide does not establish. Preserve other entries and configure permission prompts before production use.
+
+## Devin Cascade
+
+For the legacy Cascade agent, merge [configs/devin-cascade-mcp.json](configs/devin-cascade-mcp.json) into `~/.config/devin/mcp_config.json` and complete OAuth. Devin Local uses a separate CLI configuration; this file is specifically for Cascade, not the newer Devin Local marketplace.
+
+## Grok and Gemini web
+
+Where available, add a **custom MCP connector/app** named Shipvela with `https://shipvela.com/mcp` and complete OAuth. Availability, plan, region and workspace controls apply. Gemini web custom apps currently require an eligible US personal Google account, English, age 18+ and Keep Activity enabled. The Gemini CLI extension above is a separate product. A custom connection is not a global recommended listing.
+
 ## Codex
 
 ```sh

@@ -1,0 +1,9 @@
+{
+  "mcp": {
+    "shipvela": {
+      "type": "remote",
+      "url": "https://shipvela.com/mcp",
+      "enabled": true
+    }
+  }
+}

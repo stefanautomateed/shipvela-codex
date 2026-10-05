@@ -1,0 +1,15 @@
+# Vibe currently lacks native OAuth; mcp-remote handles OAuth locally.
+[[mcp_servers]]
+name = "shipvela"
+transport = "stdio"
+command = "npx"
+args = ["-y", "mcp-remote@0.14.3", "https://shipvela.com/mcp"]
+startup_timeout_sec = 120
+tool_timeout_sec = 60
+
+[tools.shipvela_prepare_static_publish]
+permission = "ask"
+[tools.shipvela_deploy_project]
+permission = "ask"
+[tools.shipvela_create_project]
+permission = "ask"
