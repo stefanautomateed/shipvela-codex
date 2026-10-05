@@ -10,6 +10,21 @@ Connections expire after 90 days and can be revoked in Settings. Tokens never be
 
 Setup: https://shipvela.com/integrations/assistants
 
+## Install in Antigravity CLI
+
+Clone this repository and install the plugin from its package directory:
+
+```sh
+git clone https://github.com/stefanautomateed/shipvela-codex.git
+agy plugin validate ./shipvela-codex/antigravity/shipvela
+agy plugin install ./shipvela-codex/antigravity/shipvela
+agy
+```
+
+Use `/mcp` to authenticate the Shipvela server in your browser. Paste the returned authorization code only into the CLI authentication prompt, never into a chat. Ask for your Shipvela hosting allowance to check the connection.
+
+Tested on 5 October 2026 with Antigravity CLI 1.2.17 on Starter Quota: native plugin validation/installation, OAuth, discovery of all 11 tools and an actual `get_usage` call passed. A native publishing test has not been performed. The marketplace application was received; curated marketplace availability is not yet confirmed.
+
 ## What it does
 
 - Inspect your projects and connected GitHub repositories.
@@ -18,7 +33,7 @@ Setup: https://shipvela.com/integrations/assistants
 - Check the exact deployment, return the live HTTPS URL and troubleshoot bounded logs.
 - Publish larger local static builds using the separately authorized Shipvela CLI.
 
-Hobby includes 3 projects and 20 publishes/month. Plan limits apply to every tool. Supported GitHub Next.js SSR requires a paid plan and currently supports Next.js 12–15. No databases or arbitrary backend processes are provisioned.
+Hobby includes 3 projects and 20 publishes/month. Plan limits apply to every tool. Compatible stable Next.js 12+ server rendering requires a paid plan; repository compatibility checks apply. No databases or arbitrary backend processes are provisioned.
 
 ## Safe publishing
 

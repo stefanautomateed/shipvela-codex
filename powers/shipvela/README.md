@@ -10,6 +10,20 @@ Connections expire after 90 days and can be revoked in Settings. Tokens never be
 
 Setup: https://shipvela.com/integrations/assistants
 
+## Install in Kiro
+
+Clone this repository, then install the Power from its package directory:
+
+```sh
+git clone https://github.com/stefanautomateed/shipvela-codex.git
+kiro-cli powers install ./shipvela-codex/powers/shipvela
+kiro-cli --v3
+```
+
+Ask Kiro to activate Shipvela and check your hosting allowance. Complete its OAuth prompt in your browser before using account tools. Powers require the V3 CLI experience; they are also supported in the Kiro IDE.
+
+Tested on 5 October 2026 with Kiro CLI 2.27.1 V3: Power and skill loading, native OAuth callback, and an actual `get_usage` call passed. A native publishing test has not been performed. Installing this public package is separate from admission to the curated Kiro registry.
+
 ## What it does
 
 - Inspect your projects and connected GitHub repositories.
@@ -18,7 +32,7 @@ Setup: https://shipvela.com/integrations/assistants
 - Check the exact deployment, return the live HTTPS URL and troubleshoot bounded logs.
 - Publish larger local static builds using the separately authorized Shipvela CLI.
 
-Hobby includes 3 projects and 20 publishes/month. Plan limits apply to every tool. Supported GitHub Next.js SSR requires a paid plan and currently supports Next.js 12–15. No databases or arbitrary backend processes are provisioned.
+Hobby includes 3 projects and 20 publishes/month. Plan limits apply to every tool. Compatible stable Next.js 12+ server rendering requires a paid plan; repository compatibility checks apply. No databases or arbitrary backend processes are provisioned.
 
 ## Safe publishing
 
