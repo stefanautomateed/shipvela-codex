@@ -24,7 +24,7 @@
     "com.openai": {
       "interface": {
         "displayName": "Shipvela",
-        "shortDescription": "Publish your website with Shipvela",
+        "shortDescription": "Publish websites with Shipvela",
         "longDescription": "Publish your website on Shipvela with explicit owner confirmation and a live HTTPS URL. Inspect connected projects, publish GitHub repositories, prepare small prebuilt static websites for review, follow deployment status and troubleshoot build logs. Larger local builds use the separately authorized Shipvela CLI. A verified Shipvela account is required; GitHub builds need a connected repository. Shipvela supports static websites and selected Next.js deployments, and does not provision databases or arbitrary long-running servers.",
         "developerName": "Content Petit LLC",
         "category": "Developer Tools",
