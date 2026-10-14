@@ -1,0 +1,24 @@
+# shipvela-codex
+
+> A template and course kit for publishing websites built with AI coding assistants through a Shipvela account, including a publishing badge, installation instructions and a first-publish lesson.
+
+Provides MCP server configurations, skills and plugins for many assistants, including Codex, Claude Code, Cursor, Gemini CLI, Zed, goose and Devin Local. Setup is done by merging the matching file from configs/ into the tool's settings, importing a folder from powers/, skills/, antigravity/ or factory/, or adding the remote MCP URL https://shipvela.com/mcp with OAuth. Publishing requires target confirmation, owner review for static uploads, stable request IDs and exact-job success checks.
+
+## Docs
+
+- [shipvela-codex README](https://raw.githubusercontent.com/stefanautomateed/shipvela-codex/main/README.md): Publishing websites from Codex, Claude Code, Cursor and other assistants, plus setup for Kiro, Kilo, OpenCode and Replit.
+- [Kiro Powers](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#kiro-powers): Importing the shipvela power via GitHub or kiro-cli, with activation keywords, MCP server and publishing skill.
+- [Kilo and OpenCode](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#kilo-and-opencode): Merging kilo and OpenCode MCP configs, auth and verification commands, and installing the shipvela-publish skill.
+- [Replit](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#replit): Adding Shipvela to Replit via OAuth or a custom MCP connector with URL https://shipvela.com/mcp.
+- [Lovable and Bolt](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#lovable-and-bolt): Connecting Shipvela in Lovable and Bolt as an MCP server, plus hosting static output or a GitHub repository.
+- [Antigravity](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#antigravity): Installing the Antigravity plugin, its plugin.json and mcp_config.json setup, authentication and manual remote config.
+- [Zed, Continue and Amp](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#zed-continue-and-amp): Setup steps for Zed, Continue and Amp, including config file paths, CLI commands and OAuth authentication.
+- [Mistral Vibe and Auggie](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#mistral-vibe-and-auggie): Mistral Vibe and Auggie setup via the mcp-remote@0.14.3 stdio bridge, with Node/npm requirements and security notes.
+- [Factory Droid](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#factory-droid): Factory Droid plugin installation via droid plugin marketplace commands, plus manual MCP setup and OAuth settings.
+- [goose](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#goose): Adding Shipvela to goose by merging configs/goose-mcp.yaml or adding a remote extension, with OAuth notes.
+- [Devin Local and Cascade](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#devin-local-and-cascade): Devin Local and legacy Cascade configuration file paths, CLI commands and OAuth login steps.
+- [Grok and Gemini web](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#grok-and-gemini-web): Adding a custom MCP connector for Grok and Gemini web, with eligibility, plan and region requirements.
+- [Gemini CLI](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#gemini-cli): Starting Gemini CLI, running /mcp auth shipvela and /shipvela:publish, plus manual gemini-mcp.json configuration.
+- [GitHub Copilot](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#github-copilot): Authenticating Copilot CLI and VS Code via /mcp and OAuth, with manual config files and cloud agent limitations.
+- [Cline](https://github.com/stefanautomateed/shipvela-codex/blob/main/README.md#cline): Cline setup, OAuth flow, publishing limits, plan allowances, and safe retry practices for Shipvela deployments.
+- [Publish with Shipvela: template and course kit](https://raw.githubusercontent.com/stefanautomateed/shipvela-codex/main/docs/publish-with-shipvela.md): Template and course kit: publishing badge, Codex and Claude Code installs, Cursor setup, and a first-publish lesson.
